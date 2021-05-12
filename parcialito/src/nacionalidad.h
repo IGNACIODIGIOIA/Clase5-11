@@ -13,5 +13,9 @@ typedef struct{
 
 }Nacionalidad;
 
+int nacionalidad_SetDesc(Nacionalidad* this, char*descripcion);
+char* nacionalidad_GetDesc(Nacionalidad* this, int* flagError);
+int nacionalidad_SetIdNac(Nacionalidad* this, int idNacionalidad);
+int nacionalidad_GetIdnac(Nacionalidad* this, int idNacionalidad);
 
 #endif /* NACIONALIDAD_H_ */
