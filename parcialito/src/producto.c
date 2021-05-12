@@ -11,10 +11,37 @@ Producto* producto_new(void)
 {
 	return malloc(sizeof(Producto));
 }
-/*Producto* producto_newParam(void);
-int producto_Delete(Producto* this);
+Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int precio)
+{
+	Producto* auxProducto = Producto_new();
+	if(auxProducto != NULL)
+		{
+			 if  (
+				 	 producto_SetIdProducto(auxProducto,idProducto) ||
+					 producto_SetidProducto(auxProducto,descripcion) ||
+					 producto_SetIdNac(auxProducto,idNacionalidad) ||
+					 producto_SetPrecio(auxProducto,precio)
+			     )
+			 	 	 {
+				 	 	 producto_delete(auxProducto);
+				 	 	 auxProducto = NULL;
+			 	 	 }
+		}
+			return auxProducto;
+}
 
-int producto_SetIdProducto(Producto* this, int idProducto);
+
+int producto_Delete(Producto* this)
+{
+	int retorno= -1;
+	if (this != NULL)
+		{
+			free(this);
+			retorno = 0;
+		}
+	return retorno;
+}
+/*int producto_SetIdProducto(Producto* this, int idProducto);
 int producto_GetIdProducto(Producto* this, int idProducto);
 int producto_SetDesc(Producto* this, char*descripcion);
 char* producto_GetDesc(Producto* this, int* flagError);

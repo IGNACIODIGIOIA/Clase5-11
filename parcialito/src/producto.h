@@ -7,6 +7,7 @@
 
 #ifndef PRODUCTO_H_
 #define PRODUCTO_H_
+
 typedef struct{
 	int idProducto;
 	char descripcion[500];
@@ -23,7 +24,7 @@ int producto_GetIdProducto(Producto* this, int idProducto);
 int producto_SetDesc(Producto* this, char*descripcion);
 char* producto_GetDesc(Producto* this, int* flagError);
 int producto_SetIdNac(Producto* this, int idNacionalidad);
-int producto_GetIdnac(Producto* this, int idNacionalidad);
+int producto_GetIdNac(Producto* this, int idNacionalidad);
 int producto_SetPrecio(Producto* this, int idPrecio);
 int producto_GetPrecio(Producto* this, int idPrecio);
 

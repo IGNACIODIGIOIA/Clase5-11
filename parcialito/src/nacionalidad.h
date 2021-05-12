@@ -8,14 +8,14 @@
 #ifndef NACIONALIDAD_H_
 #define NACIONALIDAD_H_
 typedef struct{
-	int id;
+	int idNacionalidad;
 	char descripcion[100];
 
 }Nacionalidad;
 
-Nacionalidad* producto_new(void);
-Nacionalidad* producto_newParam(void);
-int producto_Delete(Nacionalidad* this);
+Nacionalidad* nacionalidad_new(void);
+Nacionalidad* nacionalidad_newParam(void);
+int nacionalidad_Delete(Nacionalidad* this);
 int nacionalidad_SetDesc(Nacionalidad* this, char*descripcion);
 char* nacionalidad_GetDesc(Nacionalidad* this, int* flagError);
 int nacionalidad_SetIdNac(Nacionalidad* this, int idNacionalidad);
