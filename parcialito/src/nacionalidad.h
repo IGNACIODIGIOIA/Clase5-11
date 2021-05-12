@@ -13,6 +13,9 @@ typedef struct{
 
 }Nacionalidad;
 
+Nacionalidad* producto_new(void);
+Nacionalidad* producto_newParam(void);
+int producto_Delete(Nacionalidad* this);
 int nacionalidad_SetDesc(Nacionalidad* this, char*descripcion);
 char* nacionalidad_GetDesc(Nacionalidad* this, int* flagError);
 int nacionalidad_SetIdNac(Nacionalidad* this, int idNacionalidad);

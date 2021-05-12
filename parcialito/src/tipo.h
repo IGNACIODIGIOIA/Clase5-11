@@ -15,6 +15,10 @@ typedef struct{
 	char tipoTela[50];
 }Tipo;
 
+Tipo* producto_new(void);
+Tipo* producto_newParam(void);
+int producto_Delete(Tipo* this);
+
 int tipo_SetIdTipo(Tipo* this, int idTipo);
 int tipo_GetIdTipo(Tipo* this, int idTipo);
 int tipo_SetMarca(Tipo* this, char* marca);

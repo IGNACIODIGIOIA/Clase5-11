@@ -4,8 +4,13 @@
  *  Created on: 11 may. 2021
  *      Author: ignac
  */
+#include "tipo.h"
+#include <stdlib.h>
 
-
+Tipo* producto_new(void)
+{
+	return malloc(sizeof(Tipo));
+}
 /*int tipo_SetIdTipo(Tipo* this, int idTipo);
 int tipo_GetIdTipo(Tipo* this, int idTipo);
 int tipo_SetMarca(Tipo* this, char* marca);
