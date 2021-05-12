@@ -13,17 +13,17 @@ Producto* producto_new(void)
 }
 Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int precio)
 {
-	Producto* auxProducto = Producto_new();
+	Producto* auxProducto = producto_new();
 	if(auxProducto != NULL)
 		{
 			 if  (
-				 	 producto_SetIdProducto(auxProducto,idProducto) ||
-					 producto_SetidProducto(auxProducto,descripcion) ||
+					 producto_SetIdProducto(auxProducto,idProducto) ||
+					 producto_SetDesc(auxProducto,descripcion) ||
 					 producto_SetIdNac(auxProducto,idNacionalidad) ||
 					 producto_SetPrecio(auxProducto,precio)
 			     )
 			 	 	 {
-				 	 	 producto_delete(auxProducto);
+				 	 	 producto_Delete(auxProducto);
 				 	 	 auxProducto = NULL;
 			 	 	 }
 		}

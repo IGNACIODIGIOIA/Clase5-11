@@ -16,7 +16,7 @@ typedef struct{
 }Producto;
 
 Producto* producto_new(void);
-Producto* producto_newParam(void);
+Producto* producto_newParam(int idProducto,char* descripcion,int idNacionalidad,int precio)
 int producto_Delete(Producto* this);
 
 int producto_SetIdProducto(Producto* this, int idProducto);

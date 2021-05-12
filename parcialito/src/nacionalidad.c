@@ -14,18 +14,18 @@ Nacionalidad* nacionalidad_new(void)
 }
 Nacionalidad* nacionalidad_newParam(int idNacionalidad,char* descripcion)
 {
-	Nacionalidad* auxNacionalidad = Nacionalidad_new();
+	Nacionalidad* auxNacionalidad = nacionalidad_new();
 	if(auxNacionalidad != NULL)
 		{
 			 if  (
 
-					 nacionalidad_Setidnacionalidad(auxNacionalidad,idNacionalidad)||
-					 nacionalidad_SetIdProducto(auxNacionalidad,descripcion)
+					 nacionalidad_SetIdNac(auxNacionalidad,idNacionalidad)||
+					 nacionalidad_SetDesc(auxNacionalidad,descripcion)
 
 			     )
 			 	 	 {
-				 	 	 producto_delete(auxNacionalidad);
-				 	 	auxNacionalidad = NULL;
+				 	 	 nacionalidad_Delete(auxNacionalidad);
+				 	 	 auxNacionalidad = NULL;
 			 	 	 }
 		}
 			return auxNacionalidad;
